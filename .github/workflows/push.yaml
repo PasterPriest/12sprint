@@ -26,10 +26,10 @@ jobs:
       - name: Set up Docker buildx
         uses: docker/setup-buildx-action@v3
 
-       - name: Debug registry access
+      - name: Debug registry access
         run: |
-         echo "Checking Docker Hub connectivity..."
-         docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_ACCESS_TOKEN }} docker.io
+          echo "Checking Docker Hub connectivity..."
+          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_ACCESS_TOKEN }} docker.io
 
       - name: Extract metadata (tags, labels) for Docker
         id: meta
